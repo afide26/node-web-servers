@@ -4,3 +4,4 @@
 1. The use of Express as Middleware
 2. The use of handlebars as templating engine
 3. Accessing dynamic data in templates
+4. Deployment to Heroku
