@@ -14,22 +14,31 @@ hbs.registerHelper('screamIt', (text)=>{
   return text.toUpperCase();
 });
 
-app.set("view engine", "hbs");
+app.set('view engine', 'hbs');
 
 
 app.use(express.static(__dirname + '/public'));
 
-app.get("/", (req,res)=>{
-  res.render("home.hbs",{
-    pageTitle: "Home Page",
-    welcomeMessage: "Welcome to my website"
+app.get('/', (req,res)=>{
+  res.render('home.hbs',{
+    pageTitle: 'Home Page',
+    welcomeMessage: 'Welcome to my website'
   });
 });
 
-app.get("/about", (req,res)=>{
-  res.render("about.hbs",{
-    pageTitle: "About Page",
-    welcomeMessage: "Welcome to the about page"
+app.get('/about', (req,res)=>{
+  res.render('about.hbs',{
+    pageTitle: 'About Page',
+    welcomeMessage: 'Welcome to the about page'
+  });
+});
+
+
+app.get('/projects', (req,res)=>{
+  res.render('projects.hbs',{
+    pageTitle: 'Projects Page',
+    welcomeMessage: 'Welcome to the projects page',
+    projects: ['NodeJS', 'AngularJS1', 'AngularJS2', 'React', 'Cloud Deployment', 'Testing']
   });
 });
 

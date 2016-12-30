@@ -1,0 +1,15 @@
+{{> header}}
+<header>
+  <h1>{{pageTitle}}</h1>
+  <p>{{welcomeMessage}}</p>
+</header>
+
+<div class="container">
+  <ul>
+    {{#each projects}}
+    <li><p><strong><a href="#">{{this}}</a></strong></p></li>
+    {{/each}}
+  </ul>
+</div>
+
+{{> footer}}
